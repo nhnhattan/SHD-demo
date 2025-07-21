@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHD Academy - Trung Tâm Du Học Nghề Đức Uy Tín Hàng Đầu</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/banner.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <!-- Nguồn video mặc định cho desktop -->
+      <source src="./assets/video/banner.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="wrapper-content">
+      <a href="./map.htm" class="playBtn">
+        <img src="./assets/img/playBtn.png" alt="" />
+      </a>
+      <div class="content">
+        <p>
+          Bấm nút bắt đầu để khám phá <br />
+          hành trình đến Đức của bạn!
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('myVideo');
+        var videoSource = document.querySelector('#myVideo source');
+        
+        function checkScreenSize() {
+          var screenWidth = window.innerWidth;
+          
+          if (screenWidth < 576) { 
+            videoSource.setAttribute('src', './assets/video/banner-mobile.mp4');
+          } else if (screenWidth >= 576 && screenWidth < 992) {
+            videoSource.setAttribute('src', './assets/video/banner-tablet.mp4');
+          } else { 
+            videoSource.setAttribute('src', './assets/video/banner.mp4');
+          }
+          
+          video.load();
+          video.play();
+        }
+        
+        checkScreenSize();
+        
+        window.addEventListener('resize', function() {
+          checkScreenSize();
+        });
+      });
+    </script>
+  </body>
+</html>

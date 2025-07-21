@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.8.1/dist/smooth-scrollbar.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="./assets/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div class="menu-container hidden" id="menu">
+      <button id="close-menu"><i data-lucide="x"></i></button>
+      <div class="menu-group" >
+        <button class="menu-toggle">
+          <img class="" src="./assets/img/mainshd.png" alt="" />
+          <p data-key="main-building">Trụ sở chính - Tòa nhà SHD</p>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="submenu">
+          <a href="#" class="submenu-toggle">Tầng hầm</a>
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
+              Tầng G
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="submenu-content">
+            <a href="#">Tiền sảnh</a>
+            <a href="#">Khu vực lễ tân</a>
+            <a href="">Khối Tiếp nhận Quản lý học viên</a>
+            <a href="">Khối Phát triển kinh doanh</a>
+            <a href="">Pantry</a>
+          </div>
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
+              Tầng 1
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="submenu-content">
+            <a href="#">Hành lang tầng 1</a>
+            <a href="#">Phòng học tầng 1</a>
+            <a href="">Khối Nghiệp vụ và Đối ngoại</a>
+            <a href="">Phòng Marketing</a>
+            <a href="">Studio</a>
+          </div>
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
+              Tầng 2
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="submenu-content">
+            <a href="#">Hành lang tầng 2</a>
+            <a href="#">Phòng học view trong</a>
+            <a href="">Phòng học view ngoài</a>
+          </div>
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
+              Tầng 3
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="submenu-content">
+            <a href="#">Hành lang tầng 3</a>
+            <a href="#">Phòng học view trong</a>
+            <a href="">Phòng học view ngoài</a>
+          </div>
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
+              Tầng 4
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="submenu-content">
+            <a href="#">Hành lang tầng 4</a>
+            <a href="#">Phòng Hành chính - Nhân sự</a>
+            <a href="">Phòng Tài chính - Kế toán</a>
+            <a href="">Phòng họp</a>
+            <a href="">Phòng điều hành</a>
+          </div>
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
+              Tầng 5
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </button>
+          <div class="submenu-content">
+            <a href="#">Hành lang tầng 5</a>
+            <a href="#">Khối Đào tạo</a>
+            <a href="">Hội trường</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <button class="menu-toggle">
+          <img class="" src="./assets/img/520dxh.png" alt="" />
+          Cơ sở Thủ Đức
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="submenu">
+          <a href="#" class="submenu-toggle">SẢNH THANG MÁY TẦNG 2</a>
+          <button class="submenu-toggle"><div class="submenu-toggle-content">
+              Tầng 8
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div></button>
+          <div class="submenu-content">
+            <a href="#">Khối Tiếp nhận Quản lý học viên</a>
+            <a href="#">Khu vực lễ tân</a>
+            <a href="#">Hành lang tầng 8</a>
+            <a href="#">Phòng học dãy trái</a>
+            <a href="#">Phòng học dãy phải</a>
+            <a href="#">Phòng Hành chính - Nhân sự</a>
+            <a href="#">Khối Nghiệp vụ và Đối ngoại</a>
+            <a href="#">Khu vực để đồ</a>
+            <a href="#">Khối Đào tạo</a>
+          </div>
+          <button class="submenu-toggle"><div class="submenu-toggle-content">
+              HỘI TRƯỜNG LẦU 10
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div></button>
+          <div class="submenu-content">
+            <a href="#">Sảnh hội trường</a>
+            <a href="#">Khán phòng</a>
+            <a href="#">Sân khấu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <button class="menu-toggle">
+          <img class="" src="./assets/img/620dxh.jpg" alt="" />
+          KÍ TÚC XÁ 620
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="submenu">
+          <a href="#" class="submenu-toggle">SẢNH KTX</a>
+          <a href="#" class="submenu-toggle">PHÒNG KÝ TÚC 8 HỌC VIÊN</a>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <button class="menu-toggle">
+          <img class="" src="./assets/img/ktxltr.png" alt="" />
+          KÍ TÚC XÁ LÊ THỊ RIÊNG
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div class="submenu">
+          <a href="#" class="submenu-toggle">SẢNH KTX</a>
+          <a href="#" class="submenu-toggle">PHÒNG KÝ TÚC 6 HỌC VIÊN</a>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <a href="#" class="menu-toggle">
+          <img class="" src="./assets/img/44155A.jpg" alt="" />
+          KÍ TÚC XÁ 441/55A
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              style="display: none;"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="menu-group">
+        <a href="#" class="menu-toggle">
+          <img class="" src="./assets/img/44192.jpg" alt="" />
+          KÍ TÚC XÁ 441/92
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              style="display: none;"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="menu-group">
+        <a href="#" class="menu-toggle">
+          <img class="" src="./assets/img/441112.jpg" alt="" />
+          KÍ TÚC XÁ 441/112
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              style="display: none;"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="navigate-container">
+      <button class="navbar-item" id="menu-toggle">
+        <img src="./assets/img/menu.png" alt="" />
+      </button>
+      <button class="navbar-item" id="zoom-toggle">
+        <img src="./assets/img/zoom.png" alt="" />
+      </button>
+      <button class="navbar-item" id="move-toggle">
+        <img src="./assets/img/Move.png" alt="" />
+      </button>
+      <div class="language-menu hidden" id="language-menu">
+        <button class="language-item" id="viBtn">VI</button>
+        <button class="language-item" id="enBtn">EN</button>
+        <button class="language-item" id="deBtn">DE</button>
+      </div>
+
+      <button class="navbar-item" id="translation-toggle">
+        <img src="./assets/img/Translation.png" alt="" />
+      </button>
+    </div>
+    <div class="menu-footer">
+      <button class="footer-item">
+        <img src="./assets/img/home.png" alt="" />
+      </button>
+      <button class="footer-item" id="about-toggle">
+        <img src="./assets/img/infomation.png" alt="" />
+      </button>
+      <button class="footer-item" id="openMap">
+        <img src="./assets/img/overview.png" alt="" />
+      </button>
+      <button class="footer-item">
+        <img src="./assets/img/sound.png" alt="" />
+      </button>
+    </div>
+    <div class="location" id="location-content">
+      <p>TIỀN SẢNH</p>
+    </div>
+    <div class="logo">
+      <img src="./assets/img/logo.png" alt="" />
+    </div>
+    <div class="website-menu">
+      <a href="#"><img src="./assets/img/facebook.png" alt="" /></a>
+      <a href="#"><img src="./assets/img/youtube.png" alt="" /></a>
+      <button id="website-button">
+        <img src="./assets/img/website.png" alt="" />
+      </button>
+      <a href="#"><img src="./assets/img/mail.png" alt="" /></a>
+      <a href="#"><img src="./assets/img/tiktok.png" alt="" /></a>
+    </div>
+
+    <div class="website-popup hidden" id="website-popup">
+      <a href="#"><p>SHD Education</p></a>
+      <a href="#"><p>SHD Academy</p></a>
+      <a href="#"><p>SHD Corp</p></a>
+    </div>
+
+    <div class="about-popup hidden" id="about-popup">
+      <button id="close-about-popup">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="about-logo">
+        <img src="./assets/img/logo.png" alt="" />
+      </div>
+      <div class="about-content" id="about-content">
+        <p>
+          Công ty cổ phần SHD Corp (Search - Hold - Development - viết tắt SHD)
+          được thành lập vào ngày 05/09/2018, là đơn vị tiên phong tại Việt Nam
+          trong việc cung cấp các giải pháp toàn diện về đào tạo tiếng Đức, tư
+          vấn nghề nghiệp và hỗ trợ định cư tại CHLB Đức.
+        </p>
+        <p>
+          Trong hành trình phát triển, SHD đã đồng hành cùng hơn 1000 học viên
+          sang Đức học tập và làm việc, hình thành nên mạng lưới cựu học viên
+          rộng khắp 11 bang trên toàn nước Đức. Hiện tại, SHD đang đào tạo hơn
+          2000 học viên với định hướng nghề nghiệp rõ ràng trong hơn 50 ngành
+          nghề từ y tế, dịch vụ đến kỹ thuật.
+        </p>
+        <p>
+          Tại TP. HCM, SHD có 2 cơ sở đào tạo và hệ thống 5 ký túc xá tiện nghi.
+          Trụ sở chính đặt tại quận Bình Thạnh và cơ sở thứ hai tại TP. Thủ Đức,
+          được đầu tư hơn 30 phòng học hiện đại, khang trang.
+        </p>
+        <p>
+          SHD không chỉ là trung tâm đào tạo, mà còn là cầu nối chiến lược giữa
+          chính quyền các tỉnh thành Việt Nam với các bang, tổ chức giáo dục và
+          doanh nghiệp tại CHLB Đức. Chúng tôi tự hào góp phần tích cực vào
+          chiến lược phát triển nguồn nhân lực chất lượng cao, nhằm giải bài
+          toán thiếu hụt nhân lực tại Đức và đồng thời mở rộng cơ hội phát triển
+          nghề nghiệp bền vững cho người trẻ Việt Nam.
+        </p>
+        <p>
+          Với triết lý kinh doanh “Lấy khách hàng làm trung tâm của mọi hoạt
+          động, hướng đến cân bằng lợi ích của các bên”, SHD cam kết mang đến
+          giải pháp nghề nghiệp toàn diện, chất lượng, giúp học viên vững bước
+          trên hành trình hội nhập quốc tế và tạo dựng một tương lai tốt đẹp, từ
+          đó góp phần xây dựng một cộng đồng thịnh vượng và phát triển bền vững.
+        </p>
+      </div>
+      <div class="about-video" id="about-video">
+        <video muted loop controls id="myVideo">
+          <source src="./assets/video/banner.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <div class="about-image" id="about-image">
+        <img src="./assets/img/mainshd.png" alt="" />
+      </div>
+      <div class="about-menu">
+        <button id="aboutUs">VỀ CHÚNG TÔI</button>
+        <button id="videoUs">VIDEO</button>
+        <button id="imageUs">HÌNH ẢNH</button>
+      </div>
+    </div>
+
+    <div id="mini-map" class="hidden"></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="./assets/js/text.js"></script>
+  </body>
+</html>
