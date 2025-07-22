@@ -7,7 +7,7 @@ const languages = {
     "floor-3": "TẦNG 3",
     "floor-4": "TẦNG 4",
     "floor-5": "TẦNG 5",
-    "kitchen": "Pantry",
+    kitchen: "Pantry",
     "about-us": "VỀ CHÚNG TÔI",
     "video-us": "VIDEO",
     "image-us": "HÌNH ẢNH",
@@ -20,7 +20,7 @@ const languages = {
     "floor-3": "FLOOR 3",
     "floor-4": "FLOOR 4",
     "floor-5": "FLOOR 5",
-    "kitchen": "Kitchen",
+    kitchen: "Kitchen",
     "about-us": "ABOUT US",
     "video-us": "VIDEO",
     "image-us": "IMAGE",
@@ -33,7 +33,7 @@ const languages = {
     "floor-3": "GESCHOSS 3",
     "floor-4": "GESCHOSS 4",
     "floor-5": "GESCHOSS 5",
-    "kitchen": "Küche",
+    kitchen: "Küche",
     "about-us": "ÜBER UNS",
     "video-us": "VIDEO",
     "image-us": "BILD",
@@ -66,14 +66,38 @@ function checkStoredLanguage() {
 document.getElementById("viBtn").addEventListener("click", () => {
   changeLanguage("vi");
   languageMenu.classList.toggle("hidden");
+  Toastify({
+    text: "Đổi ngôn ngữ thành công!",
+    duration: 1000,
+    close: false,
+    gravity: "top",
+    position: "center",
+    backgroundColor: "green",
+  }).showToast();
 });
 document.getElementById("enBtn").addEventListener("click", () => {
   changeLanguage("en");
   languageMenu.classList.toggle("hidden");
+  Toastify({
+    text: "Đổi ngôn ngữ thành công!",
+    duration: 1000,
+    close: false,
+    gravity: "top",
+    position: "center",
+    backgroundColor: "green",
+  }).showToast();
 });
 document.getElementById("deBtn").addEventListener("click", () => {
   changeLanguage("de");
   languageMenu.classList.toggle("hidden");
+  Toastify({
+    text: "Đổi ngôn ngữ thành công!",
+    duration: 1000,
+    close: false,
+    gravity: "top",
+    position: "center",
+    backgroundColor: "green",
+  }).showToast();
 });
 
 checkStoredLanguage();

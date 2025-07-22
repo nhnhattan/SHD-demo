@@ -173,6 +173,14 @@ function toggleFullScreen() {
     }
     document.querySelector("#zoom-toggle img").src =
       "./assets/img/zoom-out.png";
+    Toastify({
+      text: "Toàn màn hình!",
+      duration: 1000,
+      close: false,
+      gravity: "top",
+      position: "center",
+      backgroundColor: "green",
+    }).showToast();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -184,6 +192,14 @@ function toggleFullScreen() {
       document.msExitFullscreen();
     }
     document.querySelector("#zoom-toggle img").src = "./assets/img/zoom.png";
+    Toastify({
+      text: "Thoát toàn màn hình!",
+      duration: 1000,
+      close: false,
+      gravity: "top",
+      position: "center",
+      backgroundColor: "green",
+    }).showToast();
   }
 }
 

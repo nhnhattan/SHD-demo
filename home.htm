@@ -10,13 +10,17 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/all.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
     <div class="menu-container hidden" id="menu">
       <button id="close-menu"><i data-lucide="x"></i></button>
-      <div class="menu-group" >
+      <div class="menu-group">
         <button class="menu-toggle">
           <img class="" src="./assets/img/mainshd.png" alt="" />
           <p data-key="main-building">Trụ sở chính - Tòa nhà SHD</p>
@@ -163,7 +167,8 @@
         </button>
         <div class="submenu">
           <a href="#" class="submenu-toggle">SẢNH THANG MÁY TẦNG 2</a>
-          <button class="submenu-toggle"><div class="submenu-toggle-content">
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
               Tầng 8
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -173,7 +178,8 @@
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-            </div></button>
+            </div>
+          </button>
           <div class="submenu-content">
             <a href="#">Khối Tiếp nhận Quản lý học viên</a>
             <a href="#">Khu vực lễ tân</a>
@@ -185,7 +191,8 @@
             <a href="#">Khu vực để đồ</a>
             <a href="#">Khối Đào tạo</a>
           </div>
-          <button class="submenu-toggle"><div class="submenu-toggle-content">
+          <button class="submenu-toggle">
+            <div class="submenu-toggle-content">
               HỘI TRƯỜNG LẦU 10
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -195,7 +202,8 @@
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-            </div></button>
+            </div>
+          </button>
           <div class="submenu-content">
             <a href="#">Sảnh hội trường</a>
             <a href="#">Khán phòng</a>
@@ -407,6 +415,7 @@
     <div id="mini-map" class="hidden"></div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="./assets/js/all.js"></script>
     <script src="./assets/js/text.js"></script>
