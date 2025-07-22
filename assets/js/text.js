@@ -1,4 +1,3 @@
-// Định nghĩa các ngôn ngữ
 const languages = {
   vi: {
     "main-building": "TRỤ SỞ CHÍNH - TÒA NHÀ SHD",

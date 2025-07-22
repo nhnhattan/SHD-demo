@@ -1,323 +1,191 @@
-// Định nghĩa locations cho các thiết bị khác nhau
-const deviceLocations = {
-  desktop: [
-     {
-    markerLatLng: [10.815059369649262, 106.77412181182721],
-    popupLatLng: [10.820059, 106.765121],
-    cornerPoint: [10.815059, 106.765121],
-    description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-    locationImg: "./assets/img/ktxltr.png",
-    // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.81489418917185, 106.77439983424597],
-    popupLatLng: [10.819059, 106.7824],
-    cornerPoint: [10.815059, 106.7824],
-    description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
-    locationImg: "./assets/img/620dxh.jpg",
-    // locationInfo: "620 Đỗ Xuân Hợp, Phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.799403194044327, 106.7224868388116],
-    popupLatLng: [10.805403, 106.745487],
-    cornerPoint: [10.799403, 106.745487],
-    description: "Trụ sở chính<br/>Tòa nhà SHD",
-    locationImg: "./assets/img/mainshd.png",
-    // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
-  },
-  {
-    markerLatLng: [10.821701114531619, 106.77162359549077],
-    popupLatLng: [10.824501, 106.774624],
-    cornerPoint: [10.822701, 106.774624],
-    description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
-    locationImg: "./assets/img/520dxh.png",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.804052, 106.713324],
-    popupLatLng: [10.806052, 106.704324],
-    cornerPoint: [10.804052, 106.704324],
-    description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/44192.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.803005, 106.712899],
-    popupLatLng: [10.805505, 106.728899],
-    cornerPoint: [10.803005, 106.728899],
-    description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/44155A.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.804564, 106.713315],
-    popupLatLng: [10.807052, 106.720315],
-    cornerPoint: [10.804564, 106.720315],
-    description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/441112.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  ],
-  tablet: [
-     {
-    markerLatLng: [10.815059369649262, 106.77412181182721],
-    popupLatLng: [10.820059, 106.765121],
-    cornerPoint: [10.815059, 106.765121],
-    description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-    locationImg: "./assets/img/ktxltr.png",
-    // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.81489418917185, 106.77439983424597],
-    popupLatLng: [10.819059, 106.7824],
-    cornerPoint: [10.815059, 106.7824],
-    description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
-    locationImg: "./assets/img/620dxh.jpg",
-    // locationInfo: "620 Đỗ Xuân Hợp, Phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.799403194044327, 106.7224868388116],
-    popupLatLng: [10.805403, 106.745487],
-    cornerPoint: [10.799403, 106.745487],
-    description: "Trụ sở chính<br/>Tòa nhà SHD",
-    locationImg: "./assets/img/mainshd.png",
-    // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
-  },
-  {
-    markerLatLng: [10.821701114531619, 106.77162359549077],
-    popupLatLng: [10.824501, 106.774624],
-    cornerPoint: [10.822701, 106.774624],
-    description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
-    locationImg: "./assets/img/520dxh.png",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.804052, 106.713324],
-    popupLatLng: [10.806052, 106.704324],
-    cornerPoint: [10.804052, 106.704324],
-    description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/44192.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.803005, 106.712899],
-    popupLatLng: [10.805505, 106.728899],
-    cornerPoint: [10.803005, 106.728899],
-    description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/44155A.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.804564, 106.713315],
-    popupLatLng: [10.807052, 106.720315],
-    cornerPoint: [10.804564, 106.720315],
-    description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/441112.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  ],
-  mobile: [
-     {
-    markerLatLng: [10.815059369649262, 106.77412181182721],
-    popupLatLng: [10.820059, 106.765121],
-    cornerPoint: [10.815059, 106.765121],
-    description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-    locationImg: "./assets/img/ktxltr.png",
-    // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.81489418917185, 106.77439983424597],
-    popupLatLng: [10.819059, 106.7824],
-    cornerPoint: [10.815059, 106.7824],
-    description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
-    locationImg: "./assets/img/620dxh.jpg",
-    // locationInfo: "620 Đỗ Xuân Hợp, Phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.799403194044327, 106.7224868388116],
-    popupLatLng: [10.805403, 106.745487],
-    cornerPoint: [10.799403, 106.745487],
-    description: "Trụ sở chính<br/>Tòa nhà SHD",
-    locationImg: "./assets/img/mainshd.png",
-    // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
-  },
-  {
-    markerLatLng: [10.821701114531619, 106.77162359549077],
-    popupLatLng: [10.824501, 106.774624],
-    cornerPoint: [10.822701, 106.774624],
-    description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
-    locationImg: "./assets/img/520dxh.png",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.804052, 106.713324],
-    popupLatLng: [10.806052, 106.704324],
-    cornerPoint: [10.804052, 106.704324],
-    description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/44192.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.803005, 106.712899],
-    popupLatLng: [10.805505, 106.728899],
-    cornerPoint: [10.803005, 106.728899],
-    description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/44155A.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  {
-    markerLatLng: [10.804564, 106.713315],
-    popupLatLng: [10.807052, 106.720315],
-    cornerPoint: [10.804564, 106.720315],
-    description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-    locationImg: "./assets/img/441112.jpg",
-    // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-  },
-  ]
-};
-
-// Hàm xác định loại thiết bị
-function getDeviceType() {
-  const width = window.innerWidth;
-  if (width < 576) return 'mobile';
-  if (width >= 576 && width < 992) return 'tablet';
-  return 'desktop';
-}
-
-// Hàm khởi tạo bản đồ
-function initMap() {
-  const deviceType = getDeviceType();
-  const locations = deviceLocations[deviceType];
-  
-  // Cấu hình map khác nhau cho từng thiết bị
-  const mapConfig = {
-    mobile: {
-      center: [10.822059, 106.744122],
-      zoom: 13.5,
-      zoomSnap: 0.1
-    },
-    tablet: {
-      center: [10.822059, 106.744122],
-      zoom: 14.2,
-      zoomSnap: 0.1
-    },
-    desktop: {
-      center: [10.822059, 106.744122],
-      zoom: 14.7,
-      zoomSnap: 0.1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bag Animation - Cut and Reveal</title>
+  <style>
+    body {
+      background: #eef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
     }
-  };
-  
-  // Khởi tạo map với cấu hình phù hợp
-  const map = L.map("map", {
-    zoomSnap: mapConfig[deviceType].zoomSnap
-  }).setView(
-    mapConfig[deviceType].center, 
-    mapConfig[deviceType].zoom
-  );
+    .container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+    .bag {
+      width: 120px;
+      position: absolute;
+      bottom: 50px;
+      left: 140px;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .item {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .item1 {
+      background-color: red;
+    }
+    .item2 {
+      background-color: green;
+    }
+    .item3 {
+      background-color: blue;
+    }
+    #cutButton {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 16px;
+      display: none;
+      z-index: 5;
+      cursor: pointer;
+    }
+    #scissors {
+      position: absolute;
+      width: 80px;
+      top: 180px;
+      left: -100px;
+      z-index: 3;
+      opacity: 0;
+    }
+    #result {
+      position: absolute;
+      width: 60px;
+      bottom: 170px;
+      left: 170px;
+      opacity: 0;
+      z-index: 4;
+      transform-origin: center bottom;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="bagA" class="bag" src="bag1.png" />
+    <img id="bagB" class="bag" src="bag1.png" style="opacity: 0;" />
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "© OpenStreetMap contributors",
-  }).addTo(map);
+    <img id="scissors" src="scissors.png" />
+    <img id="result" src="result.png" />
 
-  // Xử lý từng location
-  locations.forEach((location) => {
-    // Popup - thêm class device type
-    L.popup({
-      closeButton: false,
-      autoClose: false,
-      closeOnClick: false,
-      className: `custom-popup ${deviceType}-popup`,
-    })
-      .setLatLng(location.popupLatLng)
-      .setContent(
-        `<div class="custom-popup-content">
-          <div class="popup-image">
-            <img src="${location.locationImg}" alt="">
-          </div>
-          <div class="popup-description">
-            <strong>${location.description}</strong>
-            <button class="popup-button">Đi đến</button>
-          </div>
-        </div>`
-      )
-      .openOn(map);
+    <button id="cutButton">Cắt túi</button>
+  </div>
 
-    // Dot đỏ
-    const dotIcon = L.divIcon({
-      className: `${deviceType}-dot`,
-      html: '<div class="dot"></div>',
-      iconSize: deviceType === 'mobile' ? [10, 10] : [12, 12],
-      iconAnchor: deviceType === 'mobile' ? [8, 8] : [10, 10],
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    const bagImages = ['bag1.png', 'bag2.png', 'bag3.png'];
+    const itemColors = ['item1', 'item2', 'item3'];
+    const bagOpenImage = 'bag_open.png';
+
+    const container = document.querySelector('.container');
+    const bagA = document.getElementById('bagA');
+    const bagB = document.getElementById('bagB');
+    const scissors = document.getElementById('scissors');
+    const result = document.getElementById('result');
+    const cutButton = document.getElementById('cutButton');
+
+    let currentBag = 'A';
+
+    function crossfadeBag(img) {
+      const visibleBag = currentBag === 'A' ? bagA : bagB;
+      const hiddenBag = currentBag === 'A' ? bagB : bagA;
+
+      hiddenBag.src = img;
+      hiddenBag.style.opacity = 0;
+
+      gsap.to(hiddenBag, {
+        opacity: 1,
+        duration: 0.4,
+        ease: "power1.out",
+      });
+
+      gsap.to(visibleBag, {
+        opacity: 0,
+        duration: 0.4,
+        ease: "power1.out",
+      });
+
+      currentBag = currentBag === 'A' ? 'B' : 'A';
+    }
+
+    function throwItem(index) {
+      if (index >= 3) return;
+
+      const item = document.createElement('div');
+      item.classList.add('item', itemColors[index]);
+      container.appendChild(item);
+
+      const startX = Math.random() * 300;
+      item.style.left = `${startX}px`;
+      item.style.top = -50;
+
+      gsap.to(item, {
+        duration: 1,
+        x: 150 - startX + 35,
+        y: 300,
+        scale: 0.5,
+        ease: "power2.inOut",
+        onComplete: () => {
+          item.remove();
+          crossfadeBag(bagImages[index]);
+
+          if (index === 2) {
+            cutButton.style.display = "block";
+          }
+        },
+      });
+    }
+
+    function animateItems() {
+      for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+          throwItem(i);
+        }, i * 1500);
+      }
+    }
+
+    cutButton.addEventListener("click", () => {
+      cutButton.disabled = true;
+
+      gsap.set(scissors, { opacity: 1, x: 0 });
+      const tl = gsap.timeline();
+
+      tl.to(scissors, {
+        duration: 1.2,
+        x: 450,
+        ease: "power2.inOut",
+      })
+        .call(() => {
+          // Thay túi sang túi mở
+          crossfadeBag(bagOpenImage);
+        })
+        .to({}, { duration: 0.5 }) // delay nhỏ để túi mở mượt
+
+        // Bay hình ra sau khi túi đã chuyển sang mở
+        .to(result, {
+          duration: 1,
+          y: -100,
+          opacity: 1,
+          ease: "back.out(1.7)",
+        });
     });
-    L.marker(location.markerLatLng, { icon: dotIcon }).addTo(map);
 
-    // Polyline path
-    const path = [
-      location.popupLatLng,
-      location.cornerPoint,
-      location.markerLatLng,
-    ];
-    const polyline = L.polyline(path, {
-      color: "#FC9320",
-      weight: deviceType === 'mobile' ? 3 : 5, // Nhỏ hơn trên mobile
-    }).addTo(map);
-
-    // Tạo dot animation
-    const movingDot = L.marker(location.popupLatLng, {
-      icon: L.divIcon({
-        className: `${deviceType}-moving-dot`,
-        html: '<div class="moving-dot"></div>',
-        iconSize: deviceType === 'mobile' ? [8, 8] : [10, 10],
-        iconAnchor: deviceType === 'mobile' ? [7, 7] : [9, 9],
-      }),
-    }).addTo(map);
-
-    // Animate dot với tốc độ khác nhau
-    let progress = 0;
-    const speed = deviceType === 'mobile' ? 0.002 : 0.003;
-
-    function animateDot() {
-      if (progress > 1) progress = 0;
-      const latlng = getPolylinePoint(path, progress);
-      movingDot.setLatLng(latlng);
-      progress += speed;
-      requestAnimationFrame(animateDot);
-    }
-
-    animateDot();
-  });
-
-  // Hàm lấy LatLng theo t (0 -> 1)
-  function getPolylinePoint(path, t) {
-    if (t <= 0) return path[0];
-    if (t >= 1) return path[path.length - 1];
-
-    const total = path.length - 1;
-    const seg = Math.floor(t * total);
-    const segT = t * total - seg;
-    const p0 = L.latLng(path[seg]);
-    const p1 = L.latLng(path[seg + 1]);
-
-    const lat = p0.lat + (p1.lat - p0.lat) * segT;
-    const lng = p0.lng + (p1.lng - p0.lng) * segT;
-    return [lat, lng];
-  }
-}
-
-// Khởi tạo bản đồ khi tải trang
-document.addEventListener('DOMContentLoaded', function() {
-  initMap();
-  
-  // Xử lý thay đổi kích thước màn hình
-  let currentDevice = getDeviceType();
-  window.addEventListener('resize', function() {
-    const newDevice = getDeviceType();
-    if (newDevice !== currentDevice) {
-      currentDevice = newDevice;
-      // Xóa bản đồ cũ và tạo mới
-      document.getElementById('map').innerHTML = '';
-      initMap();
-    }
-  });
-});
+    animateItems();
+  </script>
+</body>
+</html>
