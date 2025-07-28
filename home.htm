@@ -18,12 +18,22 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
+    <!-- <iframe
+      src="https://cnp.virtual.vn/index.htm?media=Center-Ampule"
+      width="100%"
+      height="600"
+      frameborder="0"
+      allowfullscreen
+      style="border: none;" 
+      class="background-vr"
+    >
+    </iframe> -->
     <div class="menu-container hidden" id="menu">
       <button id="close-menu"><i data-lucide="x"></i></button>
       <div class="menu-group">
         <button class="menu-toggle">
           <img class="" src="./assets/img/mainshd.png" alt="" />
-          <p data-key="main-building">Trụ sở chính - Tòa nhà SHD</p>
+          <p data-key="headquarters">Trụ sở chính - Tòa nhà SHD</p>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
@@ -34,10 +44,10 @@
           </svg>
         </button>
         <div class="submenu">
-          <a href="#" class="submenu-toggle">Tầng hầm</a>
+          <a href="#" class="submenu-toggle" data-key="basement">Tầng hầm</a>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              Tầng G
+              <span data-key="g-floor">Tầng G</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -49,15 +59,19 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Tiền sảnh</a>
-            <a href="#">Khu vực lễ tân</a>
-            <a href="">Khối Tiếp nhận Quản lý học viên</a>
-            <a href="">Khối Phát triển kinh doanh</a>
-            <a href="">Pantry</a>
+            <a href="#" data-key="lobby">Tiền sảnh</a>
+            <a href="#" data-key="reception">Khu vực lễ tân</a>
+            <a href="" data-key="student-affairs-division"
+              >Khối Tiếp nhận Quản lý học viên</a
+            >
+            <a href="" data-key="admissions-department"
+              >Khối Phát triển kinh doanh</a
+            >
+            <a href="" data-key="pantry">Pantry</a>
           </div>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              Tầng 1
+              <span data-key="1st-floor">Tầng 1</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -69,15 +83,17 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Hành lang tầng 1</a>
-            <a href="#">Phòng học tầng 1</a>
-            <a href="">Khối Nghiệp vụ và Đối ngoại</a>
-            <a href="">Phòng Marketing</a>
-            <a href="">Studio</a>
+            <a href="#" data-key="1st-floor-hallway">Hành lang tầng 1</a>
+            <a href="#" data-key="1st-floor-classroom">Phòng học tầng 1</a>
+            <a href="" data-key="profession-foreign-affairs-division"
+              >Khối Nghiệp vụ và Đối ngoại</a
+            >
+            <a href="" data-key="marketing-department">Phòng Marketing</a>
+            <a href="" data-key="studio">Studio</a>
           </div>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              Tầng 2
+              <span data-key="2nd-floor">Tầng 2</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -89,13 +105,13 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Hành lang tầng 2</a>
-            <a href="#">Phòng học view trong</a>
-            <a href="">Phòng học view ngoài</a>
+            <a href="#" data-key="2nd-floor-hallway">Hành lang tầng 2</a>
+            <a href="#" data-key="inner-view-classroom">Phòng học view trong</a>
+            <a href="#" data-key="outer-view-classroom">Phòng học view ngoài</a>
           </div>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              Tầng 3
+              <span data-key="3rd-floor">Tầng 3</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -107,13 +123,13 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Hành lang tầng 3</a>
-            <a href="#">Phòng học view trong</a>
-            <a href="">Phòng học view ngoài</a>
+            <a href="#" data-key="3rd-floor-hallway">Hành lang tầng 3</a>
+            <a href="#" data-key="inner-view-classroom">Phòng học view trong</a>
+            <a href="" data-key="outer-view-classroom">Phòng học view ngoài</a>
           </div>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              Tầng 4
+              <span data-key="4th-floor">Tầng 4</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -125,15 +141,19 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Hành lang tầng 4</a>
-            <a href="#">Phòng Hành chính - Nhân sự</a>
-            <a href="">Phòng Tài chính - Kế toán</a>
-            <a href="">Phòng họp</a>
-            <a href="">Phòng điều hành</a>
+            <a href="#" data-key="4th-floor-hallway">Hành lang tầng 4</a>
+            <a href="#" data-key="administration-human-resources-department"
+              >Phòng Hành chính - Nhân sự</a
+            >
+            <a href="" data-key="finance-accounting-department"
+              >Phòng Tài chính - Kế toán</a
+            >
+            <a href="" data-key="meeting-room">Phòng họp</a>
+            <a href="" data-key="C-level-office">Phòng điều hành</a>
           </div>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              Tầng 5
+              <span data-key="5th-floor">Tầng 5</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -145,9 +165,9 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Hành lang tầng 5</a>
-            <a href="#">Khối Đào tạo</a>
-            <a href="">Hội trường</a>
+            <a href="#" data-key="5th-floor-hallway">Hành lang tầng 5</a>
+            <a href="#" data-key="training-division">Khối Đào tạo</a>
+            <a href="#" data-key="conference-room">Hội trường</a>
           </div>
         </div>
       </div>
@@ -155,7 +175,7 @@
       <div class="menu-group">
         <button class="menu-toggle">
           <img class="" src="./assets/img/520dxh.png" alt="" />
-          Cơ sở Thủ Đức
+          <span data-key="doxuanhop-Campus">Cơ sở Đỗ Xuân Hợp</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
@@ -166,10 +186,12 @@
           </svg>
         </button>
         <div class="submenu">
-          <a href="#" class="submenu-toggle">SẢNH THANG MÁY TẦNG 2</a>
+          <a href="#" class="submenu-toggle" data-key="2nd-floor-elevator-lobby"
+            >SẢNH THANG MÁY TẦNG 2</a
+          >
           <button class="submenu-toggle">
-            <div class="submenu-toggle-content">
-              Tầng 8
+            <div class="submenu-toggle-content" data-key="">
+              <span data-key="8th-floor">Tầng 8</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -181,19 +203,25 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Khối Tiếp nhận Quản lý học viên</a>
-            <a href="#">Khu vực lễ tân</a>
-            <a href="#">Hành lang tầng 8</a>
-            <a href="#">Phòng học dãy trái</a>
-            <a href="#">Phòng học dãy phải</a>
-            <a href="#">Phòng Hành chính - Nhân sự</a>
-            <a href="#">Khối Nghiệp vụ và Đối ngoại</a>
-            <a href="#">Khu vực để đồ</a>
-            <a href="#">Khối Đào tạo</a>
+            <a href="#" data-key="student-affairs-division"
+              >Khối Tiếp nhận Quản lý học viên</a
+            >
+            <a href="#" data-key="reception">Khu vực lễ tân</a>
+            <a href="#" data-key="8th-floor-hallway">Hành lang tầng 8</a>
+            <a href="#" data-key="feft-wing-classroom">Phòng học dãy trái</a>
+            <a href="#" data-key="right-wing-classroom">Phòng học dãy phải</a>
+            <a href="#" data-key="administration-human-resources-department"
+              >Phòng Hành chính - Nhân sự</a
+            >
+            <a href="#" data-key="profession-foreign-affairs-division"
+              >Khối Nghiệp vụ và Đối ngoại</a
+            >
+            <a href="#" data-key="storage-area">Khu vực để đồ</a>
+            <a href="#" data-key="training-division">Khối Đào tạo</a>
           </div>
           <button class="submenu-toggle">
             <div class="submenu-toggle-content">
-              HỘI TRƯỜNG LẦU 10
+              <span data-key="grand-hall">HỘI TRƯỜNG LỚN</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -205,9 +233,9 @@
             </div>
           </button>
           <div class="submenu-content">
-            <a href="#">Sảnh hội trường</a>
-            <a href="#">Khán phòng</a>
-            <a href="#">Sân khấu</a>
+            <a href="#" data-key="foyer">Sảnh hội trường</a>
+            <a href="#" data-key="auditorium-hall">Khán phòng</a>
+            <a href="#" data-key="stage">Sân khấu</a>
           </div>
         </div>
       </div>
@@ -215,7 +243,9 @@
       <div class="menu-group">
         <button class="menu-toggle">
           <img class="" src="./assets/img/620dxh.jpg" alt="" />
-          KÍ TÚC XÁ 620
+          <span data-key="620-doxuanhop-dormitory"
+            >KÝ TÚC XÁ 620 ĐỖ XUÂN HỢP</span
+          >
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
@@ -226,15 +256,19 @@
           </svg>
         </button>
         <div class="submenu">
-          <a href="#" class="submenu-toggle">SẢNH KTX</a>
-          <a href="#" class="submenu-toggle">PHÒNG KÝ TÚC 8 HỌC VIÊN</a>
+          <a href="#" class="submenu-toggle" data-key="dormitory-lobby"
+            >SẢNH KTX</a
+          >
+          <a href="#" class="submenu-toggle" data-key="8-bed-dorm-room"
+            >PHÒNG KÝ TÚC 8 HỌC VIÊN</a
+          >
         </div>
       </div>
 
       <div class="menu-group">
         <button class="menu-toggle">
           <img class="" src="./assets/img/ktxltr.png" alt="" />
-          KÍ TÚC XÁ LÊ THỊ RIÊNG
+          <span data-key="lethirieng-dormitory">KÍ TÚC XÁ LÊ THỊ RIÊNG</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
@@ -245,15 +279,19 @@
           </svg>
         </button>
         <div class="submenu">
-          <a href="#" class="submenu-toggle">SẢNH KTX</a>
-          <a href="#" class="submenu-toggle">PHÒNG KÝ TÚC 6 HỌC VIÊN</a>
+          <a href="#" class="submenu-toggle" data-key="dormitory-lobby"
+            >SẢNH KTX</a
+          >
+          <a href="#" class="submenu-toggle" data-key="6-bed-dorm-room"
+            >PHÒNG KÝ TÚC 6 HỌC VIÊN</a
+          >
         </div>
       </div>
 
       <div class="menu-group">
-        <a href="#" class="menu-toggle">
+        <a href="#" class="menu-toggle" data-key="">
           <img class="" src="./assets/img/44155A.jpg" alt="" />
-          KÍ TÚC XÁ 441/55A
+          <span data-key="dormitory-441-55A">KÍ TÚC XÁ 441/55A</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               style="display: none;"
@@ -267,9 +305,9 @@
       </div>
 
       <div class="menu-group">
-        <a href="#" class="menu-toggle">
+        <a href="#" class="menu-toggle" data-key="">
           <img class="" src="./assets/img/44192.jpg" alt="" />
-          KÍ TÚC XÁ 441/92
+          <span data-key="dormitory-441-92">KÍ TÚC XÁ 441/92</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               style="display: none;"
@@ -283,9 +321,9 @@
       </div>
 
       <div class="menu-group">
-        <a href="#" class="menu-toggle">
+        <a href="#" class="menu-toggle" data-key="">
           <img class="" src="./assets/img/441112.jpg" alt="" />
-          KÍ TÚC XÁ 441/112
+          <span data-key="dormitory-441-112">KÍ TÚC XÁ 441/112</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               style="display: none;"
@@ -333,7 +371,7 @@
       </button>
     </div>
     <div class="location" id="location-content">
-      <p>TIỀN SẢNH</p>
+      <p data-key="">TIỀN SẢNH</p>
     </div>
     <div class="logo">
       <img src="./assets/img/logo.png" alt="" />
@@ -362,25 +400,25 @@
         <img src="./assets/img/logo.png" alt="" />
       </div>
       <div class="about-content" id="about-content">
-        <p>
+        <p data-key="about-content-1">
           Công ty cổ phần SHD Corp (Search - Hold - Development - viết tắt SHD)
           được thành lập vào ngày 05/09/2018, là đơn vị tiên phong tại Việt Nam
           trong việc cung cấp các giải pháp toàn diện về đào tạo tiếng Đức, tư
           vấn nghề nghiệp và hỗ trợ định cư tại CHLB Đức.
         </p>
-        <p>
+        <p data-key="about-content-2">
           Trong hành trình phát triển, SHD đã đồng hành cùng hơn 1000 học viên
           sang Đức học tập và làm việc, hình thành nên mạng lưới cựu học viên
           rộng khắp 11 bang trên toàn nước Đức. Hiện tại, SHD đang đào tạo hơn
           2000 học viên với định hướng nghề nghiệp rõ ràng trong hơn 50 ngành
           nghề từ y tế, dịch vụ đến kỹ thuật.
         </p>
-        <p>
+        <p data-key="about-content-3">
           Tại TP. HCM, SHD có 2 cơ sở đào tạo và hệ thống 5 ký túc xá tiện nghi.
           Trụ sở chính đặt tại quận Bình Thạnh và cơ sở thứ hai tại TP. Thủ Đức,
           được đầu tư hơn 30 phòng học hiện đại, khang trang.
         </p>
-        <p>
+        <p data-key="about-content-4">
           SHD không chỉ là trung tâm đào tạo, mà còn là cầu nối chiến lược giữa
           chính quyền các tỉnh thành Việt Nam với các bang, tổ chức giáo dục và
           doanh nghiệp tại CHLB Đức. Chúng tôi tự hào góp phần tích cực vào
@@ -388,7 +426,7 @@
           toán thiếu hụt nhân lực tại Đức và đồng thời mở rộng cơ hội phát triển
           nghề nghiệp bền vững cho người trẻ Việt Nam.
         </p>
-        <p>
+        <p data-key="about-content-5">
           Với triết lý kinh doanh “Lấy khách hàng làm trung tâm của mọi hoạt
           động, hướng đến cân bằng lợi ích của các bên”, SHD cam kết mang đến
           giải pháp nghề nghiệp toàn diện, chất lượng, giúp học viên vững bước
@@ -399,16 +437,15 @@
       <div class="about-video" id="about-video">
         <video muted loop controls id="myVideo">
           <source src="./assets/video/banner.mp4" type="video/mp4" />
-          Your browser does not support HTML5 video.
         </video>
       </div>
       <div class="about-image" id="about-image">
         <img src="./assets/img/mainshd.png" alt="" />
       </div>
       <div class="about-menu">
-        <button id="aboutUs">VỀ CHÚNG TÔI</button>
-        <button id="videoUs">VIDEO</button>
-        <button id="imageUs">HÌNH ẢNH</button>
+        <button id="aboutUs" data-key="about-us">VỀ CHÚNG TÔI</button>
+        <button id="videoUs" data-key="about-video">VIDEO</button>
+        <button id="imageUs" data-key="about-image">HÌNH ẢNH</button>
       </div>
     </div>
 

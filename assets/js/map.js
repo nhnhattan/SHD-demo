@@ -1,20 +1,31 @@
 const menu = document.getElementById("menu");
+const aboutToggle = document.getElementById("about-toggle");
+const aboutPopup = document.getElementById("about-popup");
+const closeAboutBtn = document.getElementById("close-about-popup");
+const aboutInfor = document.getElementById("aboutUs");
+const aboutImage = document.getElementById("imageUs");
+const aboutVideo = document.getElementById("videoUs");
+const websiteBtn = document.getElementById("website-button");
+const websiteMenu = document.getElementById("website-popup");
+
+
+lucide.createIcons(); 
 
 const deviceLocations = {
   desktop: [
-    {
-      markerLatLng: [10.815059369649262, 106.77412181182721],
-      popupLatLng: [10.820059, 106.765121],
-      cornerPoint: [10.815059, 106.765121],
-      description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-      locationImg: "./assets/img/ktxltr.png",
-      locationLink: "./home.htm?media=dormitoryLeThiRieng",
-      // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.815059369649262, 106.77412181182721],
+    //   popupLatLng: [10.820059, 106.765121],
+    //   cornerPoint: [10.815059, 106.765121],
+    //   description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
+    //   locationImg: "./assets/img/ktxltr.png",
+    //   locationLink: "./home.htm?media=dormitoryLeThiRieng",
+    //   // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.81489418917185, 106.77439983424597],
-      popupLatLng: [10.819059, 106.7824],
-      cornerPoint: [10.815059, 106.7824],
+      popupLatLng: [10.803059, 106.7684],
+      cornerPoint: [10.815059, 106.7684],
       description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/620dxh.jpg",
       locationLink: "./home.htm?media=dormitory620",
@@ -22,8 +33,8 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.799403194044327, 106.7224868388116],
-      popupLatLng: [10.805403, 106.745487],
-      cornerPoint: [10.799403, 106.745487],
+      popupLatLng: [10.805403, 106.740487],
+      cornerPoint: [10.799403, 106.740487],
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
@@ -31,55 +42,55 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.821701114531619, 106.77162359549077],
-      popupLatLng: [10.824501, 106.774624],
-      cornerPoint: [10.822701, 106.774624],
+      popupLatLng: [10.824501, 106.764624],
+      cornerPoint: [10.821701114531619, 106.764624],
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804052, 106.713324],
-      popupLatLng: [10.806052, 106.704324],
-      cornerPoint: [10.804052, 106.704324],
-      description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/44192.jpg",
-      locationLink: "./home.htm?media=dormitory441/92",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804052, 106.713324],
+    //   popupLatLng: [10.806052, 106.704324],
+    //   cornerPoint: [10.804052, 106.704324],
+    //   description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/44192.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/92",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.803005, 106.712899],
-      popupLatLng: [10.805505, 106.728899],
-      cornerPoint: [10.803005, 106.728899],
+      popupLatLng: [10.808505, 106.712899],
+      cornerPoint: [10.803005, 106.712899],
       description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
       locationImg: "./assets/img/44155A.jpg",
       locationLink: "./home.htm?media=dormitory441/55A",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804564, 106.713315],
-      popupLatLng: [10.807052, 106.720315],
-      cornerPoint: [10.804564, 106.720315],
-      description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/441112.jpg",
-      locationLink: "./home.htm?media=dormitory441/112",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804564, 106.713315],
+    //   popupLatLng: [10.807052, 106.720315],
+    //   cornerPoint: [10.804564, 106.720315],
+    //   description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/441112.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/112",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
   ],
   lgDesktop: [
-    {
-      markerLatLng: [10.815059369649262, 106.77412181182721],
-      popupLatLng: [10.820059, 106.765121],
-      cornerPoint: [10.815059, 106.765121],
-      description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-      locationImg: "./assets/img/ktxltr.png",
-      locationLink: "./home.htm?media=dormitoryLeThiRieng",
-      // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.815059369649262, 106.77412181182721],
+    //   popupLatLng: [10.820059, 106.765121],
+    //   cornerPoint: [10.815059, 106.765121],
+    //   description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
+    //   locationImg: "./assets/img/ktxltr.png",
+    //   locationLink: "./home.htm?media=dormitoryLeThiRieng",
+    //   // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.81489418917185, 106.77439983424597],
-      popupLatLng: [10.819059, 106.7804],
-      cornerPoint: [10.815059, 106.7804],
+      popupLatLng: [10.805059, 106.7704],
+      cornerPoint: [10.814059, 106.7704],
       description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/620dxh.jpg",
       locationLink: "./home.htm?media=dormitory620",
@@ -96,22 +107,22 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.821701114531619, 106.77162359549077],
-      popupLatLng: [10.824501, 106.774624],
-      cornerPoint: [10.822701, 106.774624],
+      popupLatLng: [10.824501, 106.760624],
+      cornerPoint: [10.822701, 106.760624],
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804052, 106.713324],
-      popupLatLng: [10.806052, 106.710324],
-      cornerPoint: [10.804052, 106.710324],
-      description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/44192.jpg",
-      locationLink: "./home.htm?media=dormitory441/92",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804052, 106.713324],
+    //   popupLatLng: [10.806052, 106.710324],
+    //   cornerPoint: [10.804052, 106.710324],
+    //   description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/44192.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/92",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.803005, 106.712899],
       popupLatLng: [10.805505, 106.725899],
@@ -121,26 +132,26 @@ const deviceLocations = {
       locationLink: "./home.htm?media=dormitory441/55A",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804564, 106.713315],
-      popupLatLng: [10.807052, 106.718315],
-      cornerPoint: [10.804564, 106.718315],
-      description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/441112.jpg",
-      locationLink: "./home.htm?media=dormitory441/112",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804564, 106.713315],
+    //   popupLatLng: [10.807052, 106.718315],
+    //   cornerPoint: [10.804564, 106.718315],
+    //   description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/441112.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/112",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
   ],
   smDesktop: [
-    {
-      markerLatLng: [10.815059369649262, 106.77412181182721],
-      popupLatLng: [10.820059, 106.762121],
-      cornerPoint: [10.815059, 106.762121],
-      description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-      locationImg: "./assets/img/ktxltr.png",
-      locationLink: "./home.htm?media=dormitoryLeThiRieng",
-      // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.815059369649262, 106.77412181182721],
+    //   popupLatLng: [10.820059, 106.762121],
+    //   cornerPoint: [10.815059, 106.762121],
+    //   description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
+    //   locationImg: "./assets/img/ktxltr.png",
+    //   locationLink: "./home.htm?media=dormitoryLeThiRieng",
+    //   // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.81489418917185, 106.77439983424597],
       popupLatLng: [10.819059, 106.7884],
@@ -161,55 +172,55 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.821701114531619, 106.77162359549077],
-      popupLatLng: [10.828501, 106.776624],
-      cornerPoint: [10.822701, 106.776624],
+      popupLatLng: [10.828501, 106.766624],
+      cornerPoint: [10.822701, 106.766624],
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804052, 106.713324],
-      popupLatLng: [10.810052, 106.704324],
-      cornerPoint: [10.804052, 106.704324],
-      description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/44192.jpg",
-      locationLink: "./home.htm?media=dormitory441/92",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804052, 106.713324],
+    //   popupLatLng: [10.810052, 106.704324],
+    //   cornerPoint: [10.804052, 106.704324],
+    //   description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/44192.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/92",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.803005, 106.712899],
-      popupLatLng: [10.808505, 106.728899],
-      cornerPoint: [10.803005, 106.728899],
+      popupLatLng: [10.812505, 106.712899],
+      cornerPoint: [10.812005, 106.712899],
       description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
       locationImg: "./assets/img/44155A.jpg",
       locationLink: "./home.htm?media=dormitory441/55A",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804564, 106.713315],
-      popupLatLng: [10.810052, 106.718315],
-      cornerPoint: [10.804564, 106.718315],
-      description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/441112.jpg",
-      locationLink: "./home.htm?media=dormitory441/112",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804564, 106.713315],
+    //   popupLatLng: [10.810052, 106.718315],
+    //   cornerPoint: [10.804564, 106.718315],
+    //   description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/441112.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/112",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
   ],
   tablet: [
-    {
-      markerLatLng: [10.815059369649262, 106.77412181182721],
-      popupLatLng: [10.820059, 106.762121],
-      cornerPoint: [10.815059, 106.762121],
-      description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-      locationImg: "./assets/img/ktxltr.png",
-      locationLink: "./home.htm?media=dormitoryLeThiRieng",
-      // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.815059369649262, 106.77412181182721],
+    //   popupLatLng: [10.820059, 106.762121],
+    //   cornerPoint: [10.815059, 106.762121],
+    //   description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
+    //   locationImg: "./assets/img/ktxltr.png",
+    //   locationLink: "./home.htm?media=dormitoryLeThiRieng",
+    //   // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.81489418917185, 106.77439983424597],
-      popupLatLng: [10.819059, 106.7804],
-      cornerPoint: [10.815059, 106.7804],
+      popupLatLng: [10.800059, 106.7684],
+      cornerPoint: [10.815059, 106.7684],
       description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/620dxh.jpg",
       locationLink: "./home.htm?media=dormitory620",
@@ -217,8 +228,8 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.799403194044327, 106.7224868388116],
-      popupLatLng: [10.825403, 106.745487],
-      cornerPoint: [10.799403, 106.745487],
+      popupLatLng: [10.810403, 106.742487],
+      cornerPoint: [10.799403, 106.742487],
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
@@ -233,48 +244,48 @@ const deviceLocations = {
       locationLink: "./home.htm?media=DoXuanHopfacility",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804052, 106.713324],
-      popupLatLng: [10.826052, 106.709324],
-      cornerPoint: [10.804052, 106.709324],
-      description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/44192.jpg",
-      locationLink: "./home.htm?media=dormitory441/92",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804052, 106.713324],
+    //   popupLatLng: [10.826052, 106.709324],
+    //   cornerPoint: [10.804052, 106.709324],
+    //   description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/44192.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/92",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.803005, 106.712899],
-      popupLatLng: [10.815505, 106.728899],
-      cornerPoint: [10.803005, 106.728899],
+      popupLatLng: [10.830505, 106.722899],
+      cornerPoint: [10.820005, 106.722899],
       description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
       locationImg: "./assets/img/44155A.jpg",
       locationLink: "./home.htm?media=dormitory441/55A",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804564, 106.713315],
-      popupLatLng: [10.827052, 106.720315],
-      cornerPoint: [10.814564, 106.720315],
-      description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/441112.jpg",
-      locationLink: "./home.htm?media=dormitory441/112",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804564, 106.713315],
+    //   popupLatLng: [10.827052, 106.720315],
+    //   cornerPoint: [10.814564, 106.720315],
+    //   description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/441112.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/112",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
   ],
   mobile: [
-    {
-      markerLatLng: [10.815059369649262, 106.77412181182721],
-      popupLatLng: [10.750059, 106.765121],
-      cornerPoint: [10.755059, 106.765121],
-      description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
-      locationImg: "./assets/img/ktxltr.png",
-      locationLink: "./home.htm?media=dormitoryLeThiRieng",
-      // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.815059369649262, 106.77412181182721],
+    //   popupLatLng: [10.750059, 106.765121],
+    //   cornerPoint: [10.755059, 106.765121],
+    //   description: "KÍ TÚC XÁ<br/>LÊ THỊ<br/>RIÊNG",
+    //   locationImg: "./assets/img/ktxltr.png",
+    //   locationLink: "./home.htm?media=dormitoryLeThiRieng",
+    //   // locationInfo: "Số 1 đường 9, Phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.81489418917185, 106.77439983424597],
-      popupLatLng: [10.759059, 106.8024],
-      cornerPoint: [10.755059, 106.8024],
+      popupLatLng: [10.767059, 106.7724],
+      cornerPoint: [10.767059, 106.7724],
       description: "KÍ TÚC XÁ<br/>620 ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/620dxh.jpg",
       locationLink: "./home.htm?media=dormitory620",
@@ -282,8 +293,8 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.799403194044327, 106.7224868388116],
-      popupLatLng: [10.835403, 106.743487],
-      cornerPoint: [10.799403, 106.743487],
+      popupLatLng: [10.828403, 106.723487],
+      cornerPoint: [10.799403, 106.7223487],
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
@@ -291,50 +302,49 @@ const deviceLocations = {
     },
     {
       markerLatLng: [10.821701114531619, 106.77162359549077],
-      popupLatLng: [10.864501, 106.790624],
-      cornerPoint: [10.830701, 106.790624],
+      popupLatLng: [10.854501, 106.778624],
+      cornerPoint: [10.830701, 106.778624],
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804052, 106.713324],
-      popupLatLng: [10.846052, 106.688324],
-      cornerPoint: [10.804052, 106.688324],
-      description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/44192.jpg",
-      locationLink: "./home.htm?media=dormitory441/92",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804052, 106.713324],
+    //   popupLatLng: [10.846052, 106.688324],
+    //   cornerPoint: [10.804052, 106.688324],
+    //   description: "KÍ TÚC XÁ<br/>441/92<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/44192.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/92",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
     {
       markerLatLng: [10.803005, 106.712899],
-      popupLatLng: [10.705505, 106.728899],
-      cornerPoint: [10.703005, 106.728899],
+      popupLatLng: [10.716505, 106.750899],
+      cornerPoint: [10.770005, 106.720899],
       description: "KÍ TÚC XÁ<br/>441/55A<br/>ĐIỆN BIÊN PHỦ",
       locationImg: "./assets/img/44155A.jpg",
       locationLink: "./home.htm?media=dormitory441/55A",
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
-    {
-      markerLatLng: [10.804564, 106.713315],
-      popupLatLng: [10.720052, 106.690315],
-      cornerPoint: [10.770564, 106.690315],
-      description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
-      locationImg: "./assets/img/441112.jpg",
-      locationLink: "./home.htm?media=dormitory441/112",
-      // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
-    },
+    // {
+    //   markerLatLng: [10.804564, 106.713315],
+    //   popupLatLng: [10.720052, 106.690315],
+    //   cornerPoint: [10.770564, 106.690315],
+    //   description: "KÍ TÚC XÁ<br/>441/112<br/>ĐIỆN BIÊN PHỦ",
+    //   locationImg: "./assets/img/441112.jpg",
+    //   locationLink: "./home.htm?media=dormitory441/112",
+    //   // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
+    // },
   ],
 };
 
-// Hàm xác định loại thiết bị
 function getDeviceType() {
   const width = window.innerWidth;
   if (width < 576) return "mobile";
   if (width >= 576 && width < 992) return "tablet";
   if (width >= 993 && width < 1441) return "smDesktop";
-  if(width >=1921) return "lgDesktop"
+  if (width >= 1921) return "lgDesktop";
   return "desktop";
 }
 
@@ -344,8 +354,8 @@ function initMap() {
 
   const mapConfig = {
     mobile: {
-      center: [10.822059, 106.744122],
-      zoom: 11.8,
+      center: [10.800059, 106.744122],
+      zoom: 12,
       zoomSnap: 0.1,
     },
     tablet: {
@@ -354,7 +364,7 @@ function initMap() {
       zoomSnap: 0.1,
     },
     smDesktop: {
-      center: [10.836059, 106.744122],
+      center: [10.820059, 106.744122],
       zoom: 13.7,
       zoomSnap: 0.1,
     },
@@ -364,8 +374,8 @@ function initMap() {
       zoomSnap: 0.1,
     },
     desktop: {
-      center: [10.822059, 106.744122],
-      zoom: 14.7,
+      center: [10.813059, 106.744122],
+      zoom: 15,
       zoomSnap: 0.1,
     },
   };
@@ -387,7 +397,50 @@ function initMap() {
     })
       .setLatLng(location.popupLatLng)
       .setContent(
-        `<a href="${location.locationLink}" class="custom-popup">
+        location.locationImg === "./assets/img/620dxh.jpg"
+          ? `<div class="custom-popup custom-popup-group">
+          <p>KÍ TÚC XÁ <span>đường Đỗ Xuân Hợp</span></p>
+          <div class="custom-popup-option">
+          <a href="./home.htm?media=dormitoryLeThiRieng" class="custom-item"><div>
+            <strong>Lê Thị Riêng</strong>            
+          </div><div class="popup-image">
+            <img src="./assets/img/ktxltr.png" alt="">
+          </div>
+          </a>
+          <a  href="./home.htm?media=dormitory620" class="custom-item"> <div>
+            <strong>Đỗ Xuân Hợp</strong>            
+          </div><div class="popup-image">
+            <img src="./assets/img/620dxh.jpg" alt="">
+          </div>
+         </a>
+          </div>
+        </div>`
+          : location.locationImg === "./assets/img/44155A.jpg"
+          ? `<div class="custom-popup custom-popup-group">
+          <p>KÍ TÚC XÁ <span>đường Điện Biên Phủ</span></p>
+          <div class="custom-popup-option">
+          <a href="./home.htm?media=dormitory441/92" class="custom-item"><div>
+            <strong>SỐ 441/92</strong>            
+          </div><div class="popup-image">
+            <img src="./assets/img/44192.jpg" alt="">
+          </div>
+          </a>
+          <a href="./home.htm?media=dormitory441/55A
+" class="custom-item"> <div>
+            <strong>SỐ 441/55A</strong>            
+          </div><div class="popup-image">
+            <img src="./assets/img/44155A.jpg" alt="">
+          </div>
+         </a>
+         <a href="./home.htm?media=dormitory441/112" class="custom-item"> <div>
+            <strong>SỐ 441/112</strong>            
+          </div><div class="popup-image">
+            <img src="./assets/img/441112.jpg" alt="">
+          </div>
+         </a>
+          </div>
+        </div>`
+          : `<a href="${location.locationLink}" class="custom-popup">
           <div class="popup-image">
             <img src="${location.locationImg}" alt="">
           </div>
@@ -477,7 +530,74 @@ document.getElementById("menu-toggle").addEventListener("click", function (e) {
     : menu.classList.add("hidden");
 });
 
+document.querySelectorAll(".submenu").forEach(function (submenu) {
+  submenu.addEventListener("click", function () {
+    document.querySelectorAll(".submenu.active").forEach(function (openMenu) {
+      if (openMenu !== submenu) {
+        openMenu.classList.remove("active");
+      }
+    });
+
+    submenu.classList.toggle("active");
+  });
+});
+
 if (getDeviceType() === "mobile" || getDeviceType() === "tablet") {
   document.getElementById("menu-toggle").style.display = "flex";
   document.getElementById("menu").classList.add("hidden");
 }
+
+websiteBtn.addEventListener("click", () => {
+  if (websiteMenu.classList.contains("hidden")) {
+    websiteMenu.classList.remove("hidden");
+    aboutPopup.classList.add("hidden");
+  } else {
+    websiteMenu.classList.add("hidden");
+  }
+});
+
+aboutToggle.addEventListener("click", () => {
+  if (aboutPopup.classList.contains("hidden")) {
+    aboutPopup.classList.remove("hidden");
+    websiteMenu.classList.add("hidden");
+  } else {
+    aboutPopup.classList.add("hidden");
+  }
+  document.getElementById("about-content").style.display = "block";
+  document.getElementById("about-image").style.display = "none";
+  document.getElementById("about-video").style.display = "none";
+  aboutInfor.classList.add("active");
+  aboutImage.classList.remove("active");
+  aboutVideo.classList.remove("active");
+});
+
+closeAboutBtn.addEventListener("click", () => {
+  aboutPopup.classList.add("hidden");
+});
+
+aboutInfor.addEventListener("click", () => {
+  document.getElementById("about-content").style.display = "block";
+  document.getElementById("about-image").style.display = "none";
+  document.getElementById("about-video").style.display = "none";
+  aboutInfor.classList.add("active");
+  aboutImage.classList.remove("active");
+  aboutVideo.classList.remove("active");
+});
+
+aboutVideo.addEventListener("click", () => {
+  document.getElementById("about-content").style.display = "none";
+  document.getElementById("about-image").style.display = "none";
+  document.getElementById("about-video").style.display = "block";
+  aboutInfor.classList.remove("active");
+  aboutImage.classList.remove("active");
+  aboutVideo.classList.add("active");
+});
+
+aboutImage.addEventListener("click", () => {
+  document.getElementById("about-content").style.display = "none";
+  document.getElementById("about-image").style.display = "block";
+  document.getElementById("about-video").style.display = "none";
+  aboutInfor.classList.remove("active");
+  aboutImage.classList.add("active");
+  aboutVideo.classList.remove("active");
+});

@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="./assets/css/map.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
@@ -29,7 +30,59 @@
               <p>CƠ SỞ ĐỖ XUÂN HỢP</p>
             </a>
           </li>
-          <li>
+          <div class="submenu">
+            <div class="submenu-content">
+              <img src="./assets/img/520dxh.png" alt="" />
+              <p>CƠ SỞ ĐỖ XUÂN HỢP</p>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <div class="submenu-item">
+              <a href="./home.htm?media=dormitory620">
+                <img src="./assets/img/620dxh.jpg" alt="" />
+                <p>KÍ TÚC XÁ 620</p>
+              </a>
+              <a href="./home.htm?media=dormitoryLeThiRieng">
+                <img src="./assets/img/ktxltr.png" alt="" />
+                <p>KÍ TÚC XÁ LÊ THỊ RIÊNG</p>
+              </a>
+            </div>
+          </div>
+          <div class="submenu submenu-2">
+            <div class="submenu-content">
+              <img src="./assets/img/520dxh.png" alt="" />
+              <p>CƠ SỞ ĐIỆN BIÊN PHỦ</p>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <div class="submenu-item">
+              <a href="./home.htm?media=dormitory441/55A">
+                <img src="./assets/img/44155A.jpg" alt="" />
+                <p>KÍ TÚC XÁ 441/55A</p>
+              </a>
+              <a href="./home.htm?media=dormitory441/92">
+                <img src="./assets/img/44192.jpg" alt="" />
+                <p>KÍ TÚC XÁ 441/92</p>
+              </a>
+              <a href="./home.htm?media=dormitory441/112">
+                <img src="./assets/img/441112.jpg" alt="" />
+                <p>KÍ TÚC XÁ 441/112</p>
+              </a>
+            </div>
+          </div>
+          <!-- <li>
             <a href="./home.htm?media=dormitory620">
               <img src="./assets/img/620dxh.jpg" alt="" />
               <p>KÍ TÚC XÁ 620</p>
@@ -58,15 +111,99 @@
               <img src="./assets/img/441112.jpg" alt="" />
               <p>KÍ TÚC XÁ 441/112</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div id="menu-toggle"><img src="./assets/img/menu.png" alt="" /></div>
       <div class="home-logo">
         <img src="./assets/img/logo.png" alt="" />
       </div>
-    </div>
+      <div class="menu-footer">
+        <button class="footer-item" onclick="window.location.href = `./index.htm`">
+          <img src="./assets/img/home.png" alt="" />
+        </button>
+        <button class="footer-item" id="about-toggle">
+          <img src="./assets/img/infomation.png" alt="" />
+        </button>
+        <button class="footer-item">
+          <img src="./assets/img/sound.png" alt="" />
+        </button>
+      </div>
+      <div class="website-menu">
+        <a href="#"><img src="./assets/img/facebook.png" alt="" /></a>
+        <a href="#"><img src="./assets/img/youtube.png" alt="" /></a>
+        <button id="website-button">
+          <img src="./assets/img/website.png" alt="" />
+        </button>
+        <a href="#"><img src="./assets/img/mail.png" alt="" /></a>
+        <a href="#"><img src="./assets/img/tiktok.png" alt="" /></a>
+      </div>
 
+      <div class="website-popup hidden" id="website-popup">
+        <a href="#"><p>SHD Education</p></a>
+        <a href="#"><p>SHD Academy</p></a>
+        <a href="#"><p>SHD Corp</p></a>
+      </div>
+
+      <div class="about-popup hidden" id="about-popup">
+        <button id="close-about-popup">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="about-logo">
+          <img src="./assets/img/logo.png" alt="" />
+        </div>
+        <div class="about-content" id="about-content">
+          <p data-key="about-content-1">
+            Công ty cổ phần SHD Corp (Search - Hold - Development - viết tắt
+            SHD) được thành lập vào ngày 05/09/2018, là đơn vị tiên phong tại
+            Việt Nam trong việc cung cấp các giải pháp toàn diện về đào tạo
+            tiếng Đức, tư vấn nghề nghiệp và hỗ trợ định cư tại CHLB Đức.
+          </p>
+          <p data-key="about-content-2">
+            Trong hành trình phát triển, SHD đã đồng hành cùng hơn 1000 học viên
+            sang Đức học tập và làm việc, hình thành nên mạng lưới cựu học viên
+            rộng khắp 11 bang trên toàn nước Đức. Hiện tại, SHD đang đào tạo hơn
+            2000 học viên với định hướng nghề nghiệp rõ ràng trong hơn 50 ngành
+            nghề từ y tế, dịch vụ đến kỹ thuật.
+          </p>
+          <p data-key="about-content-3">
+            Tại TP. HCM, SHD có 2 cơ sở đào tạo và hệ thống 5 ký túc xá tiện
+            nghi. Trụ sở chính đặt tại quận Bình Thạnh và cơ sở thứ hai tại TP.
+            Thủ Đức, được đầu tư hơn 30 phòng học hiện đại, khang trang.
+          </p>
+          <p data-key="about-content-4">
+            SHD không chỉ là trung tâm đào tạo, mà còn là cầu nối chiến lược
+            giữa chính quyền các tỉnh thành Việt Nam với các bang, tổ chức giáo
+            dục và doanh nghiệp tại CHLB Đức. Chúng tôi tự hào góp phần tích cực
+            vào chiến lược phát triển nguồn nhân lực chất lượng cao, nhằm giải
+            bài toán thiếu hụt nhân lực tại Đức và đồng thời mở rộng cơ hội phát
+            triển nghề nghiệp bền vững cho người trẻ Việt Nam.
+          </p>
+          <p data-key="about-content-5">
+            Với triết lý kinh doanh “Lấy khách hàng làm trung tâm của mọi hoạt
+            động, hướng đến cân bằng lợi ích của các bên”, SHD cam kết mang đến
+            giải pháp nghề nghiệp toàn diện, chất lượng, giúp học viên vững bước
+            trên hành trình hội nhập quốc tế và tạo dựng một tương lai tốt đẹp,
+            từ đó góp phần xây dựng một cộng đồng thịnh vượng và phát triển bền
+            vững.
+          </p>
+        </div>
+        <div class="about-video" id="about-video">
+          <video muted loop controls id="myVideo">
+            <source src="./assets/video/banner.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="about-image" id="about-image">
+          <img src="./assets/img/mainshd.png" alt="" />
+        </div>
+        <div class="about-menu">
+          <button id="aboutUs" data-key="about-us">VỀ CHÚNG TÔI</button>
+          <button id="videoUs" data-key="about-video">VIDEO</button>
+          <button id="imageUs" data-key="about-image">HÌNH ẢNH</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="./assets/js/map.js"></script>
   </body>
