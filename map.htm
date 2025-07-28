@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="./assets/css/map.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -21,19 +25,19 @@
           <li>
             <a href="./home.htm?media=main-shd">
               <img src="./assets/img/mainshd.png" alt="" />
-              <p>TRỤ SỞ CHÍNH - TÒA NHÀ SHD</p>
+              <p data-key="headquarters">TRỤ SỞ CHÍNH - TÒA NHÀ SHD</p>
             </a>
           </li>
           <li>
             <a href="./home.htm?media=DoXuanHopfacility">
               <img src="./assets/img/520dxh.png" alt="" />
-              <p>CƠ SỞ ĐỖ XUÂN HỢP</p>
+              <p data-key="doxuanhop-Campus">CƠ SỞ ĐỖ XUÂN HỢP</p>
             </a>
           </li>
           <div class="submenu">
             <div class="submenu-content">
               <img src="./assets/img/520dxh.png" alt="" />
-              <p>CƠ SỞ ĐỖ XUÂN HỢP</p>
+              <p data-key="doxuanhop-dormitory">KÍ TÚC XÁ ĐỖ XUÂN HỢP</p>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -46,18 +50,18 @@
             <div class="submenu-item">
               <a href="./home.htm?media=dormitory620">
                 <img src="./assets/img/620dxh.jpg" alt="" />
-                <p>KÍ TÚC XÁ 620</p>
+                <p data-key="620-doxuanhop-dormitory">KÍ TÚC XÁ 620</p>
               </a>
               <a href="./home.htm?media=dormitoryLeThiRieng">
                 <img src="./assets/img/ktxltr.png" alt="" />
-                <p>KÍ TÚC XÁ LÊ THỊ RIÊNG</p>
+                <p data-key="lethirieng-dormitory">KÍ TÚC XÁ LÊ THỊ RIÊNG</p>
               </a>
             </div>
           </div>
           <div class="submenu submenu-2">
             <div class="submenu-content">
               <img src="./assets/img/520dxh.png" alt="" />
-              <p>CƠ SỞ ĐIỆN BIÊN PHỦ</p>
+              <p data-key="dienbienphu-dormitory">CƠ SỞ ĐIỆN BIÊN PHỦ</p>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   stroke-linecap="round"
@@ -70,15 +74,15 @@
             <div class="submenu-item">
               <a href="./home.htm?media=dormitory441/55A">
                 <img src="./assets/img/44155A.jpg" alt="" />
-                <p>KÍ TÚC XÁ 441/55A</p>
+                <p data-key="dormitory-441-55A">KÍ TÚC XÁ 441/55A</p>
               </a>
               <a href="./home.htm?media=dormitory441/92">
                 <img src="./assets/img/44192.jpg" alt="" />
-                <p>KÍ TÚC XÁ 441/92</p>
+                <p data-key="dormitory-441-92">KÍ TÚC XÁ 441/92</p>
               </a>
               <a href="./home.htm?media=dormitory441/112">
                 <img src="./assets/img/441112.jpg" alt="" />
-                <p>KÍ TÚC XÁ 441/112</p>
+                <p data-key="dormitory-441-112">KÍ TÚC XÁ 441/112</p>
               </a>
             </div>
           </div>
@@ -119,13 +123,19 @@
         <img src="./assets/img/logo.png" alt="" />
       </div>
       <div class="menu-footer">
-        <button class="footer-item" onclick="window.location.href = `./index.htm`">
+        <button
+          class="footer-item"
+          onclick="window.location.href = `./index.htm`"
+        >
           <img src="./assets/img/home.png" alt="" />
         </button>
         <button class="footer-item" id="about-toggle">
           <img src="./assets/img/infomation.png" alt="" />
         </button>
-        <button class="footer-item">
+        <button class="footer-item" id="translate-button">
+          <img src="./assets/img/Translation.png" alt="" />
+        </button>
+        <button class="footer-item" id="sound-button">
           <img src="./assets/img/sound.png" alt="" />
         </button>
       </div>
@@ -202,9 +212,17 @@
           <button id="imageUs" data-key="about-image">HÌNH ẢNH</button>
         </div>
       </div>
+
+      <div class="language-menu hidden" id="language-menu">
+        <button class="language-item" id="viBtn">VI</button>
+        <button class="language-item" id="enBtn">EN</button>
+        <button class="language-item" id="deBtn">DE</button>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/text.js"></script>
   </body>
 </html>

@@ -7,9 +7,10 @@ const aboutImage = document.getElementById("imageUs");
 const aboutVideo = document.getElementById("videoUs");
 const websiteBtn = document.getElementById("website-button");
 const websiteMenu = document.getElementById("website-popup");
+const languageMenu = document.getElementById("language-menu");
 
 
-lucide.createIcons(); 
+lucide.createIcons();
 
 const deviceLocations = {
   desktop: [
@@ -38,6 +39,7 @@ const deviceLocations = {
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
+      datakey: "headquarters"
       // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
     },
     {
@@ -47,6 +49,7 @@ const deviceLocations = {
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
+      datakey: "doxuanhop-Campus"
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
     // {
@@ -103,6 +106,7 @@ const deviceLocations = {
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
+      datakey: "headquarters"
       // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
     },
     {
@@ -112,6 +116,7 @@ const deviceLocations = {
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
+      datakey: "doxuanhop-Campus"
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
     // {
@@ -168,6 +173,7 @@ const deviceLocations = {
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
+      datakey: "headquarters"
       // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
     },
     {
@@ -177,6 +183,7 @@ const deviceLocations = {
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
+      datakey: "doxuanhop-Campus"
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
     // {
@@ -233,6 +240,7 @@ const deviceLocations = {
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
+      datakey: "headquarters"
       // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
     },
     {
@@ -242,6 +250,7 @@ const deviceLocations = {
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
+      datakey: "doxuanhop-Campus"
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
     // {
@@ -298,6 +307,7 @@ const deviceLocations = {
       description: "Trụ sở chính<br/>Tòa nhà SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
+      datakey: "headquarters"
       // locationInfo: "679 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh"
     },
     {
@@ -307,6 +317,7 @@ const deviceLocations = {
       description: "CƠ SỞ<br/>ĐỖ XUÂN HỢP",
       locationImg: "./assets/img/520dxh.png",
       locationLink: "./home.htm?media=DoXuanHopfacility",
+      datakey: "doxuanhop-Campus"
       // locationInfo: "502 Đỗ Xuân Hợp, phường Phước Bình, TP. Thủ Đức"
     },
     // {
@@ -399,16 +410,16 @@ function initMap() {
       .setContent(
         location.locationImg === "./assets/img/620dxh.jpg"
           ? `<div class="custom-popup custom-popup-group">
-          <p>KÍ TÚC XÁ <span>đường Đỗ Xuân Hợp</span></p>
+          <p data-key="doxuanhop-dormitory">KÍ TÚC XÁ <span>đường Đỗ Xuân Hợp</span></p>
           <div class="custom-popup-option">
           <a href="./home.htm?media=dormitoryLeThiRieng" class="custom-item"><div>
-            <strong>Lê Thị Riêng</strong>            
+            <strong data-key="ltr">Lê Thị Riêng</strong>            
           </div><div class="popup-image">
             <img src="./assets/img/ktxltr.png" alt="">
           </div>
           </a>
           <a  href="./home.htm?media=dormitory620" class="custom-item"> <div>
-            <strong>Đỗ Xuân Hợp</strong>            
+            <strong data-key="dxh">Đỗ Xuân Hợp</strong>            
           </div><div class="popup-image">
             <img src="./assets/img/620dxh.jpg" alt="">
           </div>
@@ -417,23 +428,23 @@ function initMap() {
         </div>`
           : location.locationImg === "./assets/img/44155A.jpg"
           ? `<div class="custom-popup custom-popup-group">
-          <p>KÍ TÚC XÁ <span>đường Điện Biên Phủ</span></p>
+          <p data-key="dienbienphu-dormitory">KÍ TÚC XÁ <span>đường Điện Biên Phủ</span></p>
           <div class="custom-popup-option">
           <a href="./home.htm?media=dormitory441/92" class="custom-item"><div>
-            <strong>SỐ 441/92</strong>            
+            <strong data-key="441/92">SỐ 441/92</strong>            
           </div><div class="popup-image">
             <img src="./assets/img/44192.jpg" alt="">
           </div>
           </a>
           <a href="./home.htm?media=dormitory441/55A
 " class="custom-item"> <div>
-            <strong>SỐ 441/55A</strong>            
+            <strong data-key="441/55A">SỐ 441/55A</strong>            
           </div><div class="popup-image">
             <img src="./assets/img/44155A.jpg" alt="">
           </div>
          </a>
          <a href="./home.htm?media=dormitory441/112" class="custom-item"> <div>
-            <strong>SỐ 441/112</strong>            
+            <strong data-key="441/112">SỐ 441/112</strong>            
           </div><div class="popup-image">
             <img src="./assets/img/441112.jpg" alt="">
           </div>
@@ -445,7 +456,7 @@ function initMap() {
             <img src="${location.locationImg}" alt="">
           </div>
           <div class="popup-description">
-            <strong>${location.description}</strong>            
+            <strong data-key="${location.datakey}">${location.description}</strong>            
             <button class="popup-button">Đi đến</button>
           </div>
         </a>`
@@ -601,3 +612,24 @@ aboutImage.addEventListener("click", () => {
   aboutImage.classList.add("active");
   aboutVideo.classList.remove("active");
 });
+
+document.getElementById("translate-button").addEventListener("click", () => {
+  if (document.getElementById("language-menu").classList.contains("hidden")) {
+    document.getElementById("language-menu").classList.remove("hidden");
+  } else {
+    document.getElementById("language-menu").classList.add("hidden");
+  }
+});
+
+localStorage.setItem("language", "vi")
+
+document.getElementById("sound-button").addEventListener("click", () => {
+  console.log(document.getElementById("sound-button").classList.contains("muted") )
+  if(!document.getElementById("sound-button").classList.contains("muted")) {
+    document.getElementById("sound-button").classList.add("muted")
+    document.querySelector("#sound-button img").src = "./assets/img/muted.png"
+  } else {
+    document.getElementById("sound-button").classList.remove("muted")
+    document.querySelector("#sound-button img").src = "./assets/img/sound.png"
+  }
+})
