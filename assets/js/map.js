@@ -35,7 +35,7 @@ const deviceLocations = {
       markerLatLng: [10.799403194044327, 106.7224868388116],
       popupLatLng: [10.805403, 106.740487],
       cornerPoint: [10.799403, 106.740487],
-      description: "Trụ sở chính<br/>Tòa nhà SHD",
+      description: "TRỤ SỞ SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
       datakey: "headquarters",
@@ -102,7 +102,7 @@ const deviceLocations = {
       markerLatLng: [10.799403194044327, 106.7224868388116],
       popupLatLng: [10.805403, 106.745487],
       cornerPoint: [10.799403, 106.745487],
-      description: "Trụ sở chính<br/>Tòa nhà SHD",
+      description: "TRỤ SỞ SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
       datakey: "headquarters",
@@ -169,7 +169,7 @@ const deviceLocations = {
       markerLatLng: [10.799403194044327, 106.7224868388116],
       popupLatLng: [10.811403, 106.745487],
       cornerPoint: [10.799403, 106.745487],
-      description: "Trụ sở chính<br/>Tòa nhà SHD",
+      description: "TRỤ SỞ SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
       datakey: "headquarters",
@@ -236,7 +236,7 @@ const deviceLocations = {
       markerLatLng: [10.799403194044327, 106.7224868388116],
       popupLatLng: [10.810403, 106.742487],
       cornerPoint: [10.799403, 106.742487],
-      description: "Trụ sở chính<br/>Tòa nhà SHD",
+      description: "TRỤ SỞ SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
       datakey: "headquarters",
@@ -303,7 +303,7 @@ const deviceLocations = {
       markerLatLng: [10.799403194044327, 106.7224868388116],
       popupLatLng: [10.828403, 106.723487],
       cornerPoint: [10.799403, 106.7223487],
-      description: "Trụ sở chính<br/>Tòa nhà SHD",
+      description: "TRỤ SỞ SHD",
       locationImg: "./assets/img/mainshd.png",
       locationLink: "./home.htm?media=main-shd",
       datakey: "headquarters",
@@ -394,16 +394,16 @@ function initMap() {
     zoomSnap: mapConfig[deviceType].zoomSnap,
   }).setView(mapConfig[deviceType].center, mapConfig[deviceType].zoom);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "© OpenStreetMap contributors",
-  }).addTo(map);
+  // L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  //   attribution: "© OpenStreetMap contributors",
+  // }).addTo(map);
 
-  // L.tileLayer(
-  //   "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-  //   {
-  //     attribution: "&copy; CARTO",
-  //   }
-  // ).addTo(map);
+  L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    {
+      attribution: "&copy; CARTO",
+    }
+  ).addTo(map);
 
   locations.forEach((location) => {
     L.popup({
@@ -416,7 +416,7 @@ function initMap() {
       .setContent(
         location.locationImg === "./assets/img/620dxh.jpg"
           ? `<div class="custom-popup custom-popup-group">
-              <p data-key="doxuanhop-dormitory">Ký Túc Xá <span>đường Đỗ Xuân Hợp</span></p>
+              <p data-key="doxuanhop-dormitory">Ký Túc Xá Đỗ Xuân Hợp</p>
               <div class="custom-popup-option">
                 <a href="./home.htm?media=dormitoryLeThiRieng" class="custom-item"
                   ><div>
@@ -439,7 +439,7 @@ function initMap() {
           : location.locationImg === "./assets/img/44155A.jpg"
           ? `<div class="custom-popup custom-popup-group">
               <p data-key="dienbienphu-dormitory">
-                Ký Túc Xá <span>đường Điện Biên Phủ</span>
+                Ký Túc Xá Điện Biên Phủ
               </p>
               <div class="custom-popup-option">
                 <a href="./home.htm?media=dormitory441/92" class="custom-item"
@@ -498,8 +498,8 @@ function initMap() {
       location.markerLatLng,
     ];
     const polyline = L.polyline(path, {
-      color: "#FC9320",
-      weight: deviceType === "mobile" ? 3 : 5,
+      color: "#da2527",
+      weight: deviceType === "mobile" ? 2 : 2,
     }).addTo(map);
 
     const movingDot = L.marker(location.popupLatLng, {

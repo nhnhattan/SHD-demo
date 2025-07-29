@@ -224,7 +224,7 @@ ul .submenu-2.active {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
-  margin-left: 0.75rem;
+  margin-left: 0.25rem;
 }
 
 .custom-popup-option {
@@ -269,7 +269,7 @@ ul .submenu-2.active {
 .dot {
   width: 12px;
   height: 12px;
-  background-color: #fc9320;
+  background-color: #da2527;
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -278,7 +278,7 @@ ul .submenu-2.active {
 .moving-dot {
   width: 14px;
   height: 14px;
-  background: #fc9320;
+  background: #da2527;
   border-radius: 50%;
   margin: 0;
   padding: 0;
@@ -329,7 +329,7 @@ ul .submenu-2.active {
 }
 
 .leaflet-popup-content-wrapper {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,6 +412,12 @@ ul .submenu-2.active {
 
 .leaflet-popup-pane .leaflet-popup:nth-child(2) .popup-description {
   height: 180px;
+  width: 120px;
+}
+
+.leaflet-popup-pane .leaflet-popup:nth-child(2) .popup-image img {
+  width: 120px;
+  height: 120px;
 }
 
 .leaflet-popup-content {
@@ -857,6 +863,11 @@ ul .submenu-2.active {
     height: 35px;
   }
 
+  .leaflet-popup-pane .leaflet-popup:nth-child(2) .popup-image img {
+    width: 45px;
+    height: 45px;
+  }
+
   .popup-description strong {
     width: 100%;
     text-align: center;
@@ -891,6 +902,7 @@ ul .submenu-2.active {
 
   .leaflet-popup-pane .leaflet-popup:nth-child(2) .popup-description {
     height: 90px;
+    width: 60px;
   }
 
   .leaflet-popup-pane
@@ -1044,6 +1056,11 @@ ul .submenu-2.active {
     height: 35px;
   }
 
+  .leaflet-popup-pane .leaflet-popup:nth-child(2) .popup-image img {
+    width: 60px;
+    height: 60px;
+  }
+
   .popup-description strong {
     width: 100%;
     text-align: center;
@@ -1057,7 +1074,6 @@ ul .submenu-2.active {
   .leaflet-popup-content {
     margin: 1px !important;
     width: 120px !important;
-    /* height: 180px; */
   }
 
   .popup-button {
@@ -1089,6 +1105,7 @@ ul .submenu-2.active {
 
   .leaflet-popup-pane .leaflet-popup:nth-child(2) .popup-description {
     height: 120px;
+    width: 75px;
   }
 
   .leaflet-popup-pane
