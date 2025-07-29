@@ -7,7 +7,7 @@ const languages = {
     "441/92": "số 441/92",
     "441/55A": "số 441/55A",
     "441/112": "số 441/112",
-    headquarters: "TRỤ SỞ CHÍNH - TÒA NHÀ SHD",
+    headquarters: "TÒA NHÀ TRỤ SỞ SHD",
     basement: "TẦNG HẦM",
     "g-floor": "TẦNG G",
     lobby: "Tiền sảnh",

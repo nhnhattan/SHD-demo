@@ -313,3 +313,4 @@ aboutImage.addEventListener("click", () => {
   aboutImage.classList.add("active");
   aboutVideo.classList.remove("active");
 });
+
